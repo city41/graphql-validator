@@ -15,8 +15,8 @@ export interface IValidateCallback {
   (errors?: IQueryFileError[], results?: DocumentNode[])
 }
 
-export function validateQuery(schema: GraphQLSchema, document: DocumentNode): GraphQLError[] {
-  return validate(schema, document)
+export function validateQuery(schema: GraphQLSchema, document: DocumentNode): ReadonlyArray<GraphQLError> {
+  return validate(schema, document);
 }
 
 export function loadQueryFiles(glob: string | string[], callback?: ILoadQueryCallback): Promise<DocumentNode[]> {

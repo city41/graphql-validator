@@ -1,6 +1,6 @@
 {
-  "name": "@creditkarma/graphql-validator",
-  "version": "0.5.0",
+  "name": "@city41/graphql-validator",
+  "version": "1.0.0",
   "description": "Validate queries agains a GraphQL Schema",
   "repository": {
     "url": "https://github.com/creditkarma/graphql-validator"
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/code": "^4.0.0",
     "@types/glob": "^5.0.30",
-    "@types/graphql": "^0.9.0",
+    "@types/graphql": "^0.13.3",
     "@types/lab": "^11.1.0",
     "@types/mkdirp": "^0.5.0",
     "@types/node": "^8.0.0",
@@ -45,13 +45,14 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "@creditkarma/graphql-loader": "^0.6.3",
     "commander": "^2.11.0",
     "glob": "^7.1.2",
-    "graphql-tools": "^1.1.0"
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.0.5",
+    "merge-graphql-schemas": "^1.5.3"
   },
   "peerDependencies": {
-    "graphql": "^0.9.0 || ^0.10.1"
+    "graphql": "^0.9.0 || ^0.10.1 || ^0.13.0"
   },
   "typescript": {
     "definition": "dist/index.d.ts"

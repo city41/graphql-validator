@@ -15,12 +15,13 @@ program
   .version(packagejson.version)
   .usage(`[options] (<glob.graphql>)`)
   .option('-s, --schema [pattern]', 'Use a file glob that defines a complete schema to validate against', '')
+  .option('-d, --directives [pattern]', 'Additional directives to allow in the schema', '')
   .parse(process.argv)
 
 if (!program.args.length || !program.schema) {
   program.outputHelp()
 } else {
-  cli.loadSchema(program.schema)
+  cli.loadSchema(program.schema, program.directives)
     .then((schema) => cli.validateQueries(program.args[0], schema))
     .catch((err) => process.exit(1))
 }

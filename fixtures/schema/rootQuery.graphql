@@ -2,7 +2,7 @@ interface Node {
   id: ID!
 }
 
-type RootQuery {
+type Query {
   allFilms(offset: Int, limit: Int): [Film]
   film(id: ID, filmID: ID): Film
   allPeople(offset: Int, limit: Int): [Person]

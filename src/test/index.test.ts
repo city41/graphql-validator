@@ -6,7 +6,7 @@ const describe = lab.describe
 const it = lab.it
 const before = lab.before
 
-import { loadSchema } from '@creditkarma/graphql-loader'
+import { loadSchema } from '../cli';
 import * as fs from 'fs'
 import * as glob from 'glob'
 import * as graphql from 'graphql'

@@ -1,1 +1,5 @@
-{allPeople{name}}
+{
+    allPeople{
+        name @client
+    }
+}

@@ -6,7 +6,6 @@ const describe = lab.describe
 const it = lab.it
 const before = lab.before
 
-import { GraphQLLoaderError } from '@creditkarma/graphql-loader'
 import * as fs from 'fs'
 import * as graphql from 'graphql'
 import * as mkdirp from 'mkdirp'
@@ -44,7 +43,6 @@ describe('GraphQL Validator CLI', () => {
 
       it('expect error to exist', (done) => {
         expect(err).to.exist()
-        expect(err).to.be.an.instanceof(GraphQLLoaderError)
         done()
       })
     })

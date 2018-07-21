@@ -1,3 +1,23 @@
+# FORK ALERT
+
+This is a fork of [@creditkarma/graphql-validator](https://github.com/creditkarma/graphql-validator)
+
+The changes I have made are:
+
+* updated the dependencies to current stuff (well, current at time of this writing)
+* load schema from graphql files using [merge-graphql-schemas](https://github.com/okgrow/merge-graphql-schemas) instead of [@creditkarma/graphql-loader](https://github.com/creditkarma/graphql-loader)
+* allows adding arbitrary directives using `-d`. This allows validation to still succeed when using third party directives that aren't necessarily directly in your schema, such as `@client` for apollo-link-state
+
+## Not Intended For General Use (at least not yet)
+
+I made this fork to meet my project's needs. I may keep tinkering on this and possibly send a PR to creditkarma if they agree with my changes.
+
+## To Install
+`npm install @city141/graphql-validator`
+
+
+Original README follows...
+
 # graphql-validator
 
 A CLI tool to validate queries against a GraphQL Schema.  The primary use case for this tool is to validate schema changes against an existing query store.
