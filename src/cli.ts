@@ -40,5 +40,6 @@ export function validateQueries(queriesPattern: string, validSchema: GraphQLSche
         console.log('All queries are valid\n')
     }).catch((errs) => {
         outputErrors(errs)
+        process.exit(1);
     })
 }
