@@ -13,7 +13,12 @@ The changes I have made are:
 I made this fork to meet my project's needs. I may keep tinkering on this and possibly send a PR to creditkarma if they agree with my changes.
 
 ## To Install
-`npm install @city141/graphql-validator`
+`npm install @city41/graphql-validator`
+
+## To Use
+`graphql-validator -s **/schemaFiles/*.graphql -d additional,directives,comma,separated ./queryFiles/*.graphql`
+
+`-d` is optional. For example, if your queries have the `@client` directive in them from apollo-link-state, you can add `-d client`, and that will allow that directive to pass validation. Otherwise graphql's validation will declare that directive is not defined and fail validation.
 
 
 Original README follows...
