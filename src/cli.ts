@@ -19,8 +19,6 @@ export function loadSchema(schemaPattern: string, additionalDirectives?: string)
 
     const fullSchema = mergeTypes(schemaTypeDefs);
 
-    console.log('fullSchema', fullSchema);
-
     return Promise.resolve(buildSchema(fullSchema));
 }
 
