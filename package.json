@@ -27,7 +27,7 @@
   "keywords": [
     "GraphQL"
   ],
-  "author": "Credit Karma",
+  "author": "Credit Karma, Matt Greer",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/code": "^4.0.0",
