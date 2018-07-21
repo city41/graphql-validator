@@ -1,6 +1,6 @@
 {
   "name": "@city41/graphql-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Validate queries agains a GraphQL Schema",
   "repository": {
     "url": "https://github.com/creditkarma/graphql-validator"
