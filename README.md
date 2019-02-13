@@ -1,3 +1,40 @@
+# DEPRECATED
+
+This package is not necessary. Here's how to validate a schema in just a few lines of code
+
+```
+import { validate, parse, buildSchema } from 'graphql';
+import { mergeTypes, fileLoader } from 'merge-graphql-schemas';
+
+/**
+ * A simple script that gathers our schema then validates it using
+ * GraphQL's built in validation
+ */
+
+// we need to add the @client directive to the schema, otherwise
+// the validator complains it does not exist
+const clientDirective = 'directive @client on FIELD';
+
+const documentTypeDefs = fileLoader('./src/**/*.graphql');
+const mergedDoc: string = mergeTypes(documentTypeDefs);
+
+const schemaTypeDefs = fileLoader('./src/**/*.graphqls');
+const mergedSchema: string = mergeTypes(schemaTypeDefs.concat(clientDirective));
+
+const documentNode = parse(mergedDoc);
+const schemaNode = buildSchema(mergedSchema);
+
+const validationResult = validate(schemaNode, documentNode);
+
+if (validationResult.length > 1) {
+    console.log('graphql validation errors', validationResult);
+    process.exit(1);
+} else {
+    console.log('graphql validated successfully');
+}
+```
+
+
 # FORK ALERT
 
 This is a fork of [@creditkarma/graphql-validator](https://github.com/creditkarma/graphql-validator)
